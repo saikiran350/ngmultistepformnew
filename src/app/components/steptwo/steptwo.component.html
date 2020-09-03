@@ -1,0 +1,36 @@
+<p>steptwo works!</p>
+
+
+<table name="ebgStepTwoForm">
+    <tr>
+        <td>
+            <label for="name" class="col-sm-4 control-label">Synch RPM:</label>
+        </td>
+        <td>
+            <select class="form-control" [(ngModel)]="two.synchrpm">
+                <option *ngFor="let syncData of syncArrayObject">
+                    {{ syncData.sync}}
+                </option>
+            </select>
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="name" class="col-sm-4 control-label">Enclosure & IP, IC Codes::</label>
+        </td>
+        <td>
+            <select [(ngModel)]="two.enclosure">
+                <option *ngFor="let enclosureData of enclosureObject">
+                    {{enclosureData.enclose}}E
+                </option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" class="btn btn-primary" routerLink="/stepone">Previous</button>
+            <button type="button" class="btn btn-primary" routerLink="/stepthree">Next</button>
+        </td>
+    </tr>
+</table>

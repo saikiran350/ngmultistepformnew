@@ -1,0 +1,35 @@
+<p>stepthree works!</p>
+
+<table name="ebgStepThreeForm">
+    <tr>
+        <td>
+            <label for="name" class="col-sm-4 control-label">Voltage:</label>
+        </td>
+        <td>
+            <select class="form-control" [(ngModel)]="three.voltage">
+                <option *ngFor="let voltageData of voltageArrayObject">
+                    {{ voltageData.voltageVal}}
+                </option>
+            </select>
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="name" class="col-sm-4 control-label">Output:</label>
+        </td>
+        <td>
+            <select [(ngModel)]="three.output">
+                <option *ngFor="let outputData of outputArrayObject">
+                    {{outputData.outVal}}E
+                </option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" class="btn btn-primary" routerLink="/steptwo">Previous</button>
+            <button type="button" class="btn btn-primary" (click)="finish()">Finish</button>
+        </td>
+    </tr>
+</table>
